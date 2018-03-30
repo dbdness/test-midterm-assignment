@@ -9,7 +9,6 @@ public class DateFormatter {
     private String timeZone;
 
     /**
-     *
      * @param timeZone Valid timezone per getAvailableIDs() in the {@link TimeZone} class.
      * @throws JokeException If the timeZone string is not a valid string
      */
@@ -23,11 +22,12 @@ public class DateFormatter {
     /**
      * Returns a formatted string representing the date specified, adjusted to the time zone string
      * passed in the class constructor.
+     *
      * @param date Date to be formatted according to the timezone.
      * @return Time Zone string formatted like ("dd MMM yyyy hh:mm aa") and adjusted to the provided
      * time zone
      */
-    public String getFormattedDate(Date date) {
+    String getFormattedDate(Date date) {
         String dateTimeFormat = "dd MMM yyyy hh:mm aa";
         SimpleDateFormat simpleFormat = new SimpleDateFormat(dateTimeFormat);
         simpleFormat.setTimeZone(TimeZone.getTimeZone(timeZone));

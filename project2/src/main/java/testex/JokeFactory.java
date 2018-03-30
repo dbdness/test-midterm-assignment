@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class JokeFactory {
+class JokeFactory {
     /**
      * These are the valid types that can be used to indicate required jokeOlds
      * eduprog: Contains joke related to programming and education. API only returns a new value each hour
@@ -19,11 +19,11 @@ public class JokeFactory {
      *
      * @return All the valid strings that can be used
      */
-    public List<String> getAvailableTypes() {
+    List<String> getAvailableTypes() {
         return availableTypes;
     }
 
-    public List<Joke> getJokes(String jokeTypes) throws JokeException {
+    List<Joke> getJokes(String jokeTypes) throws JokeException {
         String[] tokens = jokeTypes.split(",");
         List<Joke> jokes = new ArrayList<>();
         for (String token : tokens) {

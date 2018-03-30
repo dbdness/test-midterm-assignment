@@ -4,7 +4,7 @@ package testex;
 import java.util.Date;
 
 /**
- * Class used to fetch jokeOlds from a number of external joke API's
+ * Class used to fetch jokes from a number of external joke API's
  */
 public class JokeFetcher {
     private JokeFactory jokeFactory;
@@ -32,8 +32,8 @@ public class JokeFetcher {
     }
 
     /**
-     * @param jokesToFetch A comma separated string with values (contained in availableTypes) indicating the jokeOlds
-     *                     to fetch. Example: "eduprog,chucknorris,chucknorris,moma,tambal" will return five jokeOlds (two chucknorris)
+     * @param jokesToFetch A comma separated string with values (contained in availableTypes) indicating the jokes
+     *                     to fetch. Example: "eduprog,chucknorris,chucknorris,moma,tambal" will return five jokes (two chucknorris)
      * @throws JokeException Thrown if either of the two input arguments contains illegal values
      */
     private void checkInput(String jokesToFetch) throws JokeException {
@@ -43,15 +43,15 @@ public class JokeFetcher {
     }
 
     /**
-     * Fetch jokeOlds from external API's as given in the input string - jokesToFetch
+     * Fetch jokes from external API's as given in the input string - jokesToFetch
      *
-     * @param jokesToFetch A comma separated string with values (contained in availableTypes) indicating the jokeOlds
-     *                     to fetch. Example: "eduprog,chucknorris,chucknorris,moma,tambal" will return five jokeOlds (two chucknorris)
+     * @param jokesToFetch A comma separated string with values (contained in availableTypes) indicating the jokes
+     *                     to fetch. Example: "eduprog,chucknorris,chucknorris,moma,tambal" will return five jokes (two chucknorris)
      * @param date         Formatted date to attach to the joke.
-     * @return A Jokes instance with the requested jokeOlds + time zone adjusted string representing fetch time
-     * (the jokeOlds list can contain null values, if a server did not respond correctly)
+     * @return A Jokes instance with the requested jokes + time zone adjusted string representing fetch time
+     * (the jokes list can contain null values, if a server did not respond correctly)
      */
-    public Jokes getJokes(String jokesToFetch, Date date) throws JokeException {
+    Jokes getJokes(String jokesToFetch, Date date) throws JokeException {
         checkInput(jokesToFetch);
 
         Jokes jokes = new Jokes();

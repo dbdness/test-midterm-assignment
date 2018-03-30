@@ -59,16 +59,16 @@ class JokeFetcherTest {
 
     @Test
     void getJokesTest() throws JokeException {
-        Jokes jokes = jokeFetcher.getJokes("chucknorris,chucknorris", testDate);
+        Jokes jokes = jokeFetcher.getJokes("eduprog,chucknorris,moma,tambal", testDate);
 
-        assertThat(jokes.getJokes(), hasSize(2));
+        assertThat(jokes.getJokes(), hasSize(4));
         assertThat(jokes.getTimeZoneString(), is("03 Jan 2018 03:30 PM"));
     }
 
     @Test
     void getJokesExceptionTest() {
-        String invalidFormat = "invalidJoke";
-        assertThrows(JokeException.class, () -> jokeFetcher.getJokes(invalidFormat, testDate));
+        String invalidToken = "invalidJoke";
+        assertThrows(JokeException.class, () -> jokeFetcher.getJokes(invalidToken, testDate));
     }
 
 

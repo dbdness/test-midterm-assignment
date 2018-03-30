@@ -5,7 +5,7 @@ import java.util.List;
 
 /**
  * Encapsulates a number of Jokes and a string value containing a time zone adjusted string indicating
- * when the jokeOlds was fetched
+ * when the jokes was fetched
  */
 public class Jokes {
 
